@@ -1,6 +1,8 @@
 //Problem: https://practice.geeksforgeeks.org/problems/sieve-of-eratosthenes5242/1
 
 class Solution{
+
+    //Time Complexity: O(nlog(logn)) Space Complexity: O(N)
     static ArrayList<Integer> sieveOfEratosthenes(int N){
         boolean prime[] = new boolean[N+1];
         Arrays.fill(prime,true);
