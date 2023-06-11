@@ -9,11 +9,11 @@ class Solution {
             if(nums.length != 4) {
                 return false;
             }
-            if(s.charAt(s.length()-1) == '.') {
+            if(s.charAt(s.length()-1) == '.') {  // checks for edge case: 10.0.1.1.
                 return false;
             }
             for(int i=0; i<4; i++) {
-                if(nums[i].length() == 0 || (nums[i].length()>1 && nums[i].charAt(0) == '0')) {
+                if(nums[i].length() == 0 || (nums[i].length()>1 && nums[i].charAt(0) == '0')) {  // checks empty part 10..1   second checks for leading zeroes
                     return false;
                 }
                 if(Integer.parseInt(nums[i])<0 || Integer.parseInt(nums[i])>255) {
